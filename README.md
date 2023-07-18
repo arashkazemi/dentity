@@ -17,6 +17,10 @@ To use in other node projects, install Dentity from npm public repository:
 
         npm install dentity  
 
+and then imported using
+
+        const Dentity = require("dentity");
+        
 To use in a webpage, download the source code and extract it. The minified 
 script itself is available in the `/dist` directory. 
 

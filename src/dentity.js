@@ -61,7 +61,14 @@ class Dentity {
 			}
 		}
 		
-		if(i!==n+1) processed+=str[n];
+		if(i!==n+1) {
+			if(str[n]==='&') {
+				processed+="&amp;";
+			}
+			else {
+				processed+=str[n];
+			}
+		}
 
 		return processed.replace(/[\u00A0-\u9999<>]/g, function(i) {
 			return Dentity.encode_map.hasOwnProperty(i) ? 
