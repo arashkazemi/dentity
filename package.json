@@ -1,0 +1,43 @@
+{
+  "name": "dentity",
+  "version": "1.0.0",
+  "description": "A Lightweight Decoder and Encoder for HTML Entities",
+  "main": "src/dentity.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "node src/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arashkazemi/dentity.git"
+  },
+  "keywords": [
+    "html",
+    "entity",
+    "entities",
+    "string",
+    "encoder",
+    "decoder"
+  ],
+  "author": {
+    "name": "Arash Kazemi",
+    "email": "contact.arash.kazemi@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "Arash Kazemi",
+      "email": "contact.arash.kazemi@gmail.com",
+      "web": "https://github.com/arashkazemi"
+    }
+  ],
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/arashkazemi/dentity/issues"
+  },
+  "homepage": "https://github.com/arashkazemi/dentity#readme",
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev": "^1.1.1"
+  }
+}
