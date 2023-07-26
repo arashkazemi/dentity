@@ -98,7 +98,7 @@ class Dentity {
 	};
 
 
-	static registerPrototypes() 
+	static registerPrototypeFunctions() 
 	{
 		String.prototype.decodeHTML = function() { return Dentity.decode(this); };
 		String.prototype.encodeHTML = function() { return Dentity.encode(this); };

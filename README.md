@@ -49,7 +49,7 @@ The `decode` function takes a second argument `is_strict` which if true causes
 the function to only accept W3C valid encodings and doesn't accept the exceptions 
 like `&copy` (without the semicolon at the end). Its default value is false.
 
-A helper function `registerPrototypes` is also available, that would register 
+A helper function `registerPrototypeFunctions` is also available, that would register 
 both functions on String.prototype as `encodeHTML` and `decodeHTML` so the above 
 examples can be done like:
 
@@ -63,7 +63,7 @@ which can be very helpful in most situations, but this is not the default behavi
 because of the possibility of unwanted consequences like name collisions. So one
 should call 
 
-        Dentity.registerPrototypes();
+        Dentity.registerPrototypeFunctions();
 
 once after importing Dentity in order to use them.
 

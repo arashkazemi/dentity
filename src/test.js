@@ -6050,7 +6050,7 @@ function randomString(len) {
 
 console.log("SUCCESS");
 
-Dentity.registerPrototypes();
+Dentity.registerPrototypeFunctions();
 
 console.log("\nRandom tests...")
 
