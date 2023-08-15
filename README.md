@@ -69,6 +69,6 @@ once after importing Dentity in order to use them.
 
 ---
 
-Copyright (C) 2023 Arash Kazemi <contact.arash.kazemi@gmail.com>
+Copyright (C) 2023 Arash Kazemi <contact.arash.kazemi@gmail.com>. All rights reserved.
 
 Dentity project is subject to the terms of BSD-2-Clause License. See the `LICENSE` file for more details.
