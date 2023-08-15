@@ -1,7 +1,7 @@
 /* 
-
-  Dentity - A Lightweight Decoder and Encoder for HTML Entities
-  Copyright (C) 2023 Arash Kazemi <contact.arash.kazemi@gmail.com>
+  Dentity
+  Copyright (C) 2023 Arash Kazemi <contact.arash.kazemi@gmail.com>.
+  All rights reserved.
   
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions are met:
