@@ -31,6 +31,14 @@ It is also available via unpkg CDN and can be included in HTML files using
 
 ### Usage
 
+There are two main functions in Dentity:
+
+        encode(str)
+
+and
+
+        decode(str, is_strict=false, convert_nbsp_to_sp=true)
+
 To encode a string, use the `encode` function:
 
         Dentity.encode("hello > < ≠");
@@ -45,9 +53,17 @@ and similarly you can use `decode` function to do the reverse transform:
 
 which will give `"hello > < ≠"` back.
 
-The `decode` function takes a second argument `is_strict` which if true causes 
+The `decode` function takes a second argument `is_strict` which if `true` causes 
 the function to only accept W3C valid encodings and doesn't accept the exceptions 
-like `&copy` (without the semicolon at the end). Its default value is false.
+like `&copy` (without the semicolon at the end). Its default value is `false`.
+
+The last argument of the `decode` function is `convert_nbsp_to_sp`. By 
+definition, `&nbsp;` and its equivalents are decoded to code 160 which means a
+non-breaking space, but in a text what we normally expect from a space is code 
+32 which is breakable and code 160 may lead to unforeseen results. As a workaround 
+for this, Dentity converts `&nbsp;` to code 32 instead of code 160 normally. You can
+prevent this default behavior by setting `convert_nbsp_to_sp` to `false`. As 
+stated, its default value is `true`.
 
 A helper function `registerPrototypeFunctions` is also available, that would register 
 both functions on String.prototype as `encodeHTML` and `decodeHTML` so the above 

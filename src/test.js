@@ -6009,10 +6009,11 @@ var enc_dec_samples = [
 to its license (BSD-2-Clause) as stated in the header of this file. */
 
 
-console.log("Predefined tests...")
+console.log("Predefined decode tests...")
+
 for(let i of enc_dec_samples) {
-	if( Dentity.decode(i.decoded) !== Dentity.decode(i.encoded)) {
-		console.log("ERROR", i, Dentity.decode(i.decoded), Dentity.decode(i.encoded));
+	if( i.decoded !== Dentity.decode(i.encoded,false,false)) {
+		console.log("ERROR", i, "<"+i.decoded+">", "<"+Dentity.decode(i.encoded,false,false)+">");
 		return;
 	}
 }
@@ -6058,11 +6059,11 @@ console.log("\nRandom tests...")
 for(let i=0; i<1000; i++) {
 	let s = randomString(10000);
 
-	if(s!==s.encodeHTML().decodeHTML()) {
+	if(s!==s.encodeHTML().decodeHTML(false,false)) {
 		console.log("ERROR");
 		console.log(s);
 		console.log(s.encodeHTML());
-		console.log(s.encodeHTML().decodeHTML());
+		console.log(s.encodeHTML().decodeHTML(false,false));
 		return;
 	}
 }
