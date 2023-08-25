@@ -82,7 +82,7 @@ class Dentity
     }
 
 
-    static decode(str, is_strict=false, convert_nbsp_to_sp=true) 
+    static decode(str, is_strict=false, convert_nbsp_to_sp=false) 
     {
         // Partly based on the answer given by user Gumbo on stackoverflow to a related question
         // -> https://stackoverflow.com/a/4339083

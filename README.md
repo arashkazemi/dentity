@@ -37,7 +37,7 @@ There are two main functions in Dentity:
 
 and
 
-        decode(str, is_strict=false, convert_nbsp_to_sp=true)
+        decode(str, is_strict=false, convert_nbsp_to_sp=false)
 
 To encode a string, use the `encode` function:
 
@@ -61,9 +61,9 @@ The last argument of the `decode` function is `convert_nbsp_to_sp`. By
 definition, `&nbsp;` and its equivalents are decoded to code 160 which means a
 non-breaking space, but in a text what we normally expect from a space is code 
 32 which is breakable and code 160 may lead to unforeseen results. As a workaround 
-for this, Dentity converts `&nbsp;` to code 32 instead of code 160 normally. You can
-prevent this default behavior by setting `convert_nbsp_to_sp` to `false`. As 
-stated, its default value is `true`.
+for this, Dentity offers a way to convert `&nbsp;` to code 32 instead of code 160. 
+You can enable this by setting `convert_nbsp_to_sp` to `true`. As stated, its default 
+value is `false`.
 
 A helper function `registerPrototypeFunctions` is also available, that would register 
 both functions on String.prototype as `encodeHTML` and `decodeHTML` so the above 
